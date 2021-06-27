@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "testcase.djc_demo",
+    "children" : [ {
+      "name" : "test_005",
+      "children" : [ {
+        "name" : "TestAppLets",
+        "children" : [ {
+          "name" : "打开微信，进入小程序首页，断言成功",
+          "uid" : "6bd1b128304759fb",
+          "parentUid" : "adac32980333a1e8690e8fe878cbea94",
+          "status" : "broken",
+          "time" : {
+            "start" : 1624365429024,
+            "stop" : 1624365431040,
+            "duration" : 2016
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "adac32980333a1e8690e8fe878cbea94"
+      } ],
+      "uid" : "fe15dcb5b8c2fc7a97ebae960324c313"
+    } ],
+    "uid" : "dda40bbf927e1b6b81a87c4fe9ac4a09"
+  } ]
+}

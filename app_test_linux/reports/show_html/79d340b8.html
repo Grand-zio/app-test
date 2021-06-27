@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test Report</title>
+    <style>body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  /* do not increase min-width as some may use split screens */
+  min-width: 800px;
+  color: #999;
+}
+
+h1 {
+  font-size: 24px;
+  color: black;
+}
+
+h2 {
+  font-size: 16px;
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+a {
+  color: #999;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/******************************
+ * SUMMARY INFORMATION
+ ******************************/
+#environment td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+}
+#environment tr:nth-child(odd) {
+  background-color: #f6f6f6;
+}
+
+/******************************
+ * TEST RESULT COLORS
+ ******************************/
+span.passed,
+.passed .col-result {
+  color: green;
+}
+
+span.skipped,
+span.xfailed,
+span.rerun,
+.skipped .col-result,
+.xfailed .col-result,
+.rerun .col-result {
+  color: orange;
+}
+
+span.error,
+span.failed,
+span.xpassed,
+.error .col-result,
+.failed .col-result,
+.xpassed .col-result {
+  color: red;
+}
+
+/******************************
+ * RESULTS TABLE
+ *
+ * 1. Table Layout
+ * 2. Extra
+ * 3. Sorting items
+ *
+ ******************************/
+/*------------------
+ * 1. Table Layout
+ *------------------*/
+#results-table {
+  border: 1px solid #e6e6e6;
+  color: #999;
+  font-size: 12px;
+  width: 100%;
+}
+#results-table th,
+#results-table td {
+  padding: 5px;
+  border: 1px solid #E6E6E6;
+  text-align: left;
+}
+#results-table th {
+  font-weight: bold;
+}
+
+/*------------------
+ * 2. Extra
+ *------------------*/
+.log {
+  background-color: #e6e6e6;
+  border: 1px solid #e6e6e6;
+  color: black;
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  height: 230px;
+  overflow-y: scroll;
+  padding: 5px;
+  white-space: pre-wrap;
+}
+.log:only-child {
+  height: inherit;
+}
+
+div.image {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.image img {
+  width: 320px;
+}
+
+div.video {
+  border: 1px solid #e6e6e6;
+  float: right;
+  height: 240px;
+  margin-left: 5px;
+  overflow: hidden;
+  width: 320px;
+}
+div.video video {
+  overflow: hidden;
+  width: 320px;
+  height: 240px;
+}
+
+.collapsed {
+  display: none;
+}
+
+.expander::after {
+  content: " (show details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.collapser::after {
+  content: " (hide details)";
+  color: #BBB;
+  font-style: italic;
+  cursor: pointer;
+}
+
+/*------------------
+ * 3. Sorting items
+ *------------------*/
+.sortable {
+  cursor: pointer;
+}
+
+.sort-icon {
+  font-size: 0px;
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  /*triangle*/
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.inactive .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #E6E6E6;
+}
+.asc.active .sort-icon {
+  /*finish triangle*/
+  border-bottom: 8px solid #999;
+}
+.desc.active .sort-icon {
+  /*finish triangle*/
+  border-top: 8px solid #999;
+}
+</style></head>
+  <body onLoad="init()">
+    <script>/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+function toArray(iter) {
+    if (iter === null) {
+        return null;
+    }
+    return Array.prototype.slice.call(iter);
+}
+
+function find(selector, elem) { // eslint-disable-line no-redeclare
+    if (!elem) {
+        elem = document;
+    }
+    return elem.querySelector(selector);
+}
+
+function findAll(selector, elem) {
+    if (!elem) {
+        elem = document;
+    }
+    return toArray(elem.querySelectorAll(selector));
+}
+
+function sortColumn(elem) {
+    toggleSortStates(elem);
+    const colIndex = toArray(elem.parentNode.childNodes).indexOf(elem);
+    let key;
+    if (elem.classList.contains('result')) {
+        key = keyResult;
+    } else if (elem.classList.contains('links')) {
+        key = keyLink;
+    } else {
+        key = keyAlpha;
+    }
+    sortTable(elem, key(colIndex));
+}
+
+function showAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(showExtras);
+}
+
+function hideAllExtras() { // eslint-disable-line no-unused-vars
+    findAll('.col-result').forEach(hideExtras);
+}
+
+function showExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.remove('collapsed');
+    expandcollapse.classList.remove('expander');
+    expandcollapse.classList.add('collapser');
+}
+
+function hideExtras(colresultElem) {
+    const extras = colresultElem.parentNode.nextElementSibling;
+    const expandcollapse = colresultElem.firstElementChild;
+    extras.classList.add('collapsed');
+    expandcollapse.classList.remove('collapser');
+    expandcollapse.classList.add('expander');
+}
+
+function showFilters() {
+    const filterItems = document.getElementsByClassName('filter');
+    for (let i = 0; i < filterItems.length; i++)
+        filterItems[i].hidden = false;
+}
+
+function addCollapse() {
+    // Add links for show/hide all
+    const resulttable = find('table#results-table');
+    const showhideall = document.createElement('p');
+    showhideall.innerHTML = '<a href="javascript:showAllExtras()">Show all details</a> / ' +
+                            '<a href="javascript:hideAllExtras()">Hide all details</a>';
+    resulttable.parentElement.insertBefore(showhideall, resulttable);
+
+    // Add show/hide link to each result
+    findAll('.col-result').forEach(function(elem) {
+        const collapsed = getQueryParameter('collapsed') || 'Passed';
+        const extras = elem.parentNode.nextElementSibling;
+        const expandcollapse = document.createElement('span');
+        if (extras.classList.contains('collapsed')) {
+            expandcollapse.classList.add('expander');
+        } else if (collapsed.includes(elem.innerHTML)) {
+            extras.classList.add('collapsed');
+            expandcollapse.classList.add('expander');
+        } else {
+            expandcollapse.classList.add('collapser');
+        }
+        elem.appendChild(expandcollapse);
+
+        elem.addEventListener('click', function(event) {
+            if (event.currentTarget.parentNode.nextElementSibling.classList.contains('collapsed')) {
+                showExtras(event.currentTarget);
+            } else {
+                hideExtras(event.currentTarget);
+            }
+        });
+    });
+}
+
+function getQueryParameter(name) {
+    const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function init () { // eslint-disable-line no-unused-vars
+    resetSortHeaders();
+
+    addCollapse();
+
+    showFilters();
+
+    sortColumn(find('.initial-sort'));
+
+    findAll('.sortable').forEach(function(elem) {
+        elem.addEventListener('click',
+            function() {
+                sortColumn(elem);
+            }, false);
+    });
+}
+
+function sortTable(clicked, keyFunc) {
+    const rows = findAll('.results-table-row');
+    const reversed = !clicked.classList.contains('asc');
+    const sortedRows = sort(rows, keyFunc, reversed);
+    /* Whole table is removed here because browsers acts much slower
+     * when appending existing elements.
+     */
+    const thead = document.getElementById('results-table-head');
+    document.getElementById('results-table').remove();
+    const parent = document.createElement('table');
+    parent.id = 'results-table';
+    parent.appendChild(thead);
+    sortedRows.forEach(function(elem) {
+        parent.appendChild(elem);
+    });
+    document.getElementsByTagName('BODY')[0].appendChild(parent);
+}
+
+function sort(items, keyFunc, reversed) {
+    const sortArray = items.map(function(item, i) {
+        return [keyFunc(item), i];
+    });
+
+    sortArray.sort(function(a, b) {
+        const keyA = a[0];
+        const keyB = b[0];
+
+        if (keyA == keyB) return 0;
+
+        if (reversed) {
+            return keyA < keyB ? 1 : -1;
+        } else {
+            return keyA > keyB ? 1 : -1;
+        }
+    });
+
+    return sortArray.map(function(item) {
+        const index = item[1];
+        return items[index];
+    });
+}
+
+function keyAlpha(colIndex) {
+    return function(elem) {
+        return elem.childNodes[1].childNodes[colIndex].firstChild.data.toLowerCase();
+    };
+}
+
+function keyLink(colIndex) {
+    return function(elem) {
+        const dataCell = elem.childNodes[1].childNodes[colIndex].firstChild;
+        return dataCell == null ? '' : dataCell.innerText.toLowerCase();
+    };
+}
+
+function keyResult(colIndex) {
+    return function(elem) {
+        const strings = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed',
+            'Skipped', 'Passed'];
+        return strings.indexOf(elem.childNodes[1].childNodes[colIndex].firstChild.data);
+    };
+}
+
+function resetSortHeaders() {
+    findAll('.sort-icon').forEach(function(elem) {
+        elem.parentNode.removeChild(elem);
+    });
+    findAll('.sortable').forEach(function(elem) {
+        const icon = document.createElement('div');
+        icon.className = 'sort-icon';
+        icon.textContent = 'vvv';
+        elem.insertBefore(icon, elem.firstChild);
+        elem.classList.remove('desc', 'active');
+        elem.classList.add('asc', 'inactive');
+    });
+}
+
+function toggleSortStates(elem) {
+    //if active, toggle between asc and desc
+    if (elem.classList.contains('active')) {
+        elem.classList.toggle('asc');
+        elem.classList.toggle('desc');
+    }
+
+    //if inactive, reset all other functions and add ascending active
+    if (elem.classList.contains('inactive')) {
+        resetSortHeaders();
+        elem.classList.remove('inactive');
+        elem.classList.add('active');
+    }
+}
+
+function isAllRowsHidden(value) {
+    return value.hidden == false;
+}
+
+function filterTable(elem) { // eslint-disable-line no-unused-vars
+    const outcomeAtt = 'data-test-result';
+    const outcome = elem.getAttribute(outcomeAtt);
+    const classOutcome = outcome + ' results-table-row';
+    const outcomeRows = document.getElementsByClassName(classOutcome);
+
+    for(let i = 0; i < outcomeRows.length; i++){
+        outcomeRows[i].hidden = !elem.checked;
+    }
+
+    const rows = findAll('.results-table-row').filter(isAllRowsHidden);
+    const allRowsHidden = rows.length == 0 ? true : false;
+    const notFoundMessage = document.getElementById('not-found-message');
+    notFoundMessage.hidden = !allRowsHidden;
+}
+</script>
+    <h1>79d340b8.html</h1>
+    <p>Report generated on 24-Jun-2021 at 09:49:32 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <h2>Environment</h2>
+    <table id="environment">
+      <tr>
+        <td>Packages</td>
+        <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "6.2.4"}</td></tr>
+      <tr>
+        <td>Platform</td>
+        <td>macOS-10.15.6-x86_64-i386-64bit</td></tr>
+      <tr>
+        <td>Plugins</td>
+        <td>{"allure-pytest": "2.8.18", "html": "3.1.1", "metadata": "1.11.0", "rerunfailures": "10.0"}</td></tr>
+      <tr>
+        <td>Python</td>
+        <td>3.8.6</td></tr></table>
+    <h2>Summary</h2>
+    <p>1 tests ran in 47.08 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>, <input checked="true" class="filter" data-test-result="rerun" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="rerun">1 rerun</span>
+    <h2>Results</h2>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable result initial-sort" col="result">Result</th>
+          <th class="sortable" col="name">Test</th>
+          <th class="sortable" col="duration">Duration</th>
+          <th class="sortable links" col="links">Links</th></tr>
+        <tr hidden="true" id="not-found-message">
+          <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testcase/djc_demo/test_005.py::TestAppLets::test_into_home_000</td>
+          <td class="col-duration">17.44</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;ebuy_app.testcase.djc_demo.test_005.TestAppLets object at 0x1230c4880&gt;, device_name = &#x27;10.15.20.72:20001&#x27;<br/><br/>    @allure.feature(&#x27;UI测试demo&#x27;)<br/>    @allure.title(&quot;打开微信，进入小程序首页，断言成功&quot;)<br/>    @allure.severity(&#x27;blocker&#x27;)<br/>    @allure.description(&quot;打开微信，登录小程序，进入小熊麦麦首页&quot;)<br/>    def test_into_home_000(self, device_name):<br/>    <br/>        try:<br/>            e_buy_home_img_except = &quot;/Users/dongjunchao/Desktop/ebuy_app/statics/exce_img/e_buy_home_offline.jpg&quot;<br/>            d = u2.connect(device_name)<br/>            d.implicitly_wait(15.0)<br/>    <br/>            screen_status = d.info.get(&#x27;screenOn&#x27;)<br/>            if not screen_status:<br/>                d.screen_on()<br/>                d.swipe_ext(&quot;up&quot;, 0.6)<br/>                time.sleep(3)<br/>    <br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            time.sleep(1)<br/>    <br/>            d(description=&quot;第2屏&quot;).click()<br/>            d(resourceId=&quot;com.miui.home:id/icon_icon&quot;, description=&quot;微信&quot;).click()<br/>    <br/>            # d.app_start(&quot;com.tencent.mm&quot;, wait=True)<br/>            time.sleep(3)<br/>    <br/>            # 判断是否在微信首页-发现页<br/>            found_icon = d(resourceId=&quot;com.tencent.mm:id/dub&quot;, text=&quot;发现&quot;)<br/>            if not found_icon.exists:<br/>                # d(resourceId=&quot;com.tencent.mm:id/dn&quot;, description=&quot;返回&quot;).click()<br/>                d.press(&quot;back&quot;)<br/>&gt;           found_icon.click(timeout=10)<br/><br/>testcase/djc_demo/test_005.py:51: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;uiautomator2._selector.UiObject object at 0x12311cf70&gt;, timeout = 10, offset = None<br/><br/>    def click(self, timeout=None, offset=None):<br/>        &quot;&quot;&quot;<br/>        Click UI element.<br/>    <br/>        Args:<br/>            timeout: seconds wait element show up<br/>            offset: (xoff, yoff) default (0.5, 0.5) -&gt; center<br/>    <br/>        The click method does the same logic as java uiautomator does.<br/>        1. waitForExists 2. get VisibleBounds center 3. send click event<br/>    <br/>        Raises:<br/>            UiObjectNotFoundError<br/>        &quot;&quot;&quot;<br/>&gt;       self.must_wait(timeout=timeout)<br/><br/>venv/lib/python3.8/site-packages/uiautomator2/_selector.py:150: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;uiautomator2._selector.UiObject object at 0x12311cf70&gt;, exists = True, timeout = 10<br/><br/>    def must_wait(self, exists=True, timeout=None):<br/>        &quot;&quot;&quot; wait and if not found raise UiObjectNotFoundError &quot;&quot;&quot;<br/>        if not self.wait(exists, timeout):<br/>&gt;           raise UiObjectNotFoundError({&#x27;code&#x27;: -32002, &#x27;data&#x27;: str(self.selector), &#x27;method&#x27;: &#x27;wait&#x27;})<br/><span class="error">E           uiautomator2.exceptions.UiObjectNotFoundError: -32002 Client error: &lt;&gt; data: Selector [resourceId=&#x27;com.tencent.mm:id/dub&#x27;, text=&#x27;发现&#x27;], method: None</span><br/><br/>venv/lib/python3.8/site-packages/uiautomator2/_selector.py:345: UiObjectNotFoundError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;ebuy_app.testcase.djc_demo.test_005.TestAppLets object at 0x1230c4880&gt;, device_name = &#x27;10.15.20.72:20001&#x27;<br/><br/>    @allure.feature(&#x27;UI测试demo&#x27;)<br/>    @allure.title(&quot;打开微信，进入小程序首页，断言成功&quot;)<br/>    @allure.severity(&#x27;blocker&#x27;)<br/>    @allure.description(&quot;打开微信，登录小程序，进入小熊麦麦首页&quot;)<br/>    def test_into_home_000(self, device_name):<br/>    <br/>        try:<br/>            e_buy_home_img_except = &quot;/Users/dongjunchao/Desktop/ebuy_app/statics/exce_img/e_buy_home_offline.jpg&quot;<br/>            d = u2.connect(device_name)<br/>            d.implicitly_wait(15.0)<br/>    <br/>            screen_status = d.info.get(&#x27;screenOn&#x27;)<br/>            if not screen_status:<br/>                d.screen_on()<br/>                d.swipe_ext(&quot;up&quot;, 0.6)<br/>                time.sleep(3)<br/>    <br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            time.sleep(1)<br/>    <br/>            d(description=&quot;第2屏&quot;).click()<br/>            d(resourceId=&quot;com.miui.home:id/icon_icon&quot;, description=&quot;微信&quot;).click()<br/>    <br/>            # d.app_start(&quot;com.tencent.mm&quot;, wait=True)<br/>            time.sleep(3)<br/>    <br/>            # 判断是否在微信首页-发现页<br/>            found_icon = d(resourceId=&quot;com.tencent.mm:id/dub&quot;, text=&quot;发现&quot;)<br/>            if not found_icon.exists:<br/>                # d(resourceId=&quot;com.tencent.mm:id/dn&quot;, description=&quot;返回&quot;).click()<br/>                d.press(&quot;back&quot;)<br/>            found_icon.click(timeout=10)<br/>            time.sleep(3)<br/>            my_found_pic = img.save_screen_img(d, &#x27;my_found_page&#x27;, device_name)  # 发现页截图<br/>    <br/>            # 进入小程序<br/>            applet_icon = d(resourceId=&quot;android:id/title&quot;, text=&quot;小程序&quot;)<br/>            applet_icon.click()<br/>            time.sleep(3)<br/>            applets_pic = img.save_screen_img(d, &#x27;applet_page&#x27;, device_name)  # 小程序页截图<br/>    <br/>            d.xpath(&#x27;//androidx.appcompat.widget.LinearLayoutCompat&#x27;).click()<br/>            time.sleep(1)<br/>            d.send_keys(&quot;云品智能&quot;, clear=True)<br/>            time.sleep(1)<br/>    <br/>            d.click(0.222, 0.193)<br/>            time.sleep(5)<br/>            shou_ye = img.save_screen_img(d, &#x27;shou_ye&#x27;, device_name)<br/>    <br/>            time.sleep(15)<br/>    <br/>            d.press(&quot;home&quot;)<br/>            d.app_stop(&quot;com.tencent.mm&quot;)<br/>    <br/>            comment = [&#x27;e Buy Life&#x27;, &#x27;For your better life!&#x27;, &#x27;精选商品&#x27;]<br/>            result = as_i.assert_images(device_name, e_buy_home_img_except, shou_ye, comment)<br/>            log.info(3)<br/>            # ocr 结果<br/>            ocr_result = result.get(&#x27;ocr_result&#x27;)<br/>            ocr_description = str(result.get(&#x27;ocr_description&#x27;))<br/>    <br/>            # 图片对比<br/>            compare_img = result.get(&#x27;compare_img_path&#x27;)<br/>    <br/>            similar_description = str(result.get(&#x27;similar_data&#x27;))<br/>            pHash = result.get(&#x27;similar_data&#x27;).get(&#x27;pHash&#x27;)<br/>            aHash = result.get(&#x27;similar_data&#x27;).get(&#x27;aHash&#x27;)<br/>            third_res = result.get(&#x27;similar_data&#x27;).get(&#x27;third_res&#x27;)<br/>            log.info(4)<br/>            if ocr_result:<br/>                if pHash &lt; 25 and aHash &lt; 10:<br/>                    if third_res and third_res &gt; 0.95:<br/>                        is_similar = True<br/>                    else:<br/>                        is_similar = True<br/>                else:<br/>                    is_similar = False<br/>            else:<br/>                is_similar = False<br/>            log.info(5)<br/>            # 截图<br/>            AllureReport.show_step(&#x27;手机型号&#x27;, device_name)<br/>            AllureReport.show_pic(e_buy_home_img_except, &#x27;预期-首页截图&#x27;)<br/>            AllureReport.show_pic(my_found_pic, &#x27;发现页截图&#x27;)<br/>            AllureReport.show_pic(applets_pic, &#x27;小程序页截图&#x27;)<br/>            AllureReport.show_pic(shou_ye, &#x27;实际-首页截图&#x27;)<br/>            AllureReport.show_pic(compare_img, &#x27;预期-实际比对效果&#x27;)<br/>    <br/>            AllureReport.show_step(&#x27;ocr光学文字识别&#x27;, ocr_description)<br/>            AllureReport.show_step(&#x27;图像相似度计算结果&#x27;, similar_description)<br/>    <br/>            # assert is_similar<br/>    <br/>        except Exception:<br/>&gt;           assert 1 == 2<br/><span class="error">E           assert 1 == 2</span><br/><br/>testcase/djc_demo/test_005.py:115: AssertionError<br/> ------------------------------Captured stderr call------------------------------ <br/>[D 210624 09:48:48 __init__:634] kill process(ps): uiautomator
+[D 210624 09:48:49 init:59] Use cached assets: /Users/dongjunchao/.uiautomator2/cache/app-uiautomator.apk-d3f17174fb/app-uiautomator.apk
+[D 210624 09:48:50 __init__:365] pm install /data/local/tmp/app-uiautomator.apk
+[D 210624 09:48:51 init:59] Use cached assets: /Users/dongjunchao/.uiautomator2/cache/app-uiautomator-test.apk-652bf9e13c/app-uiautomator-test.apk
+[D 210624 09:48:52 __init__:365] pm install /data/local/tmp/app-uiautomator-test.apk
+[D 210624 09:48:53 __init__:651] uiautomator-v2 is starting ... left: 40.0s
+[D 210624 09:48:54 __init__:651] uiautomator-v2 is starting ... left: 39.0s
+[D 210624 09:48:55 __init__:651] uiautomator-v2 is starting ... left: 37.9s
+[I 210624 09:48:55 __init__:617] uiautomator back to normal
+<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 47
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;DELETE /services/uiautomator HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 120427
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 115
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 5973
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /upload/data/local/tmp/app-uiautomator.apk HTTP/1.1&quot; 200 77
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /upload/data/local/tmp/app-uiautomator-test.apk HTTP/1.1&quot; 200 82
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /services/uiautomator HTTP/1.1&quot; 200 53
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /services/uiautomator HTTP/1.1&quot; 200 31
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /services/uiautomator HTTP/1.1&quot; 200 31
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /services/uiautomator HTTP/1.1&quot; 200 31
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 196
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 223
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 291
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 305
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 226
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 292
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 304
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90<br/></div></td></tr></tbody>
+      <tbody class="rerun results-table-row">
+        <tr>
+          <td class="col-result">Rerun</td>
+          <td class="col-name">testcase/djc_demo/test_005.py::TestAppLets::test_into_home_000</td>
+          <td class="col-duration">26.48</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;ebuy_app.testcase.djc_demo.test_005.TestAppLets object at 0x1230c4370&gt;, device_name = &#x27;10.15.20.72:20001&#x27;<br/><br/>    @allure.feature(&#x27;UI测试demo&#x27;)<br/>    @allure.title(&quot;打开微信，进入小程序首页，断言成功&quot;)<br/>    @allure.severity(&#x27;blocker&#x27;)<br/>    @allure.description(&quot;打开微信，登录小程序，进入小熊麦麦首页&quot;)<br/>    def test_into_home_000(self, device_name):<br/>    <br/>        try:<br/>            e_buy_home_img_except = &quot;/Users/dongjunchao/Desktop/ebuy_app/statics/exce_img/e_buy_home_offline.jpg&quot;<br/>            d = u2.connect(device_name)<br/>            d.implicitly_wait(15.0)<br/>    <br/>            screen_status = d.info.get(&#x27;screenOn&#x27;)<br/>            if not screen_status:<br/>                d.screen_on()<br/>                d.swipe_ext(&quot;up&quot;, 0.6)<br/>                time.sleep(3)<br/>    <br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            time.sleep(1)<br/>    <br/>            d(description=&quot;第2屏&quot;).click()<br/>            d(resourceId=&quot;com.miui.home:id/icon_icon&quot;, description=&quot;微信&quot;).click()<br/>    <br/>            # d.app_start(&quot;com.tencent.mm&quot;, wait=True)<br/>            time.sleep(3)<br/>    <br/>            # 判断是否在微信首页-发现页<br/>            found_icon = d(resourceId=&quot;com.tencent.mm:id/dub&quot;, text=&quot;发现&quot;)<br/>            if not found_icon.exists:<br/>                # d(resourceId=&quot;com.tencent.mm:id/dn&quot;, description=&quot;返回&quot;).click()<br/>                d.press(&quot;back&quot;)<br/>&gt;           found_icon.click(timeout=10)<br/><br/>testcase/djc_demo/test_005.py:51: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;uiautomator2._selector.UiObject object at 0x12343e6a0&gt;, timeout = 10, offset = None<br/><br/>    def click(self, timeout=None, offset=None):<br/>        &quot;&quot;&quot;<br/>        Click UI element.<br/>    <br/>        Args:<br/>            timeout: seconds wait element show up<br/>            offset: (xoff, yoff) default (0.5, 0.5) -&gt; center<br/>    <br/>        The click method does the same logic as java uiautomator does.<br/>        1. waitForExists 2. get VisibleBounds center 3. send click event<br/>    <br/>        Raises:<br/>            UiObjectNotFoundError<br/>        &quot;&quot;&quot;<br/>&gt;       self.must_wait(timeout=timeout)<br/><br/>venv/lib/python3.8/site-packages/uiautomator2/_selector.py:150: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;uiautomator2._selector.UiObject object at 0x12343e6a0&gt;, exists = True, timeout = 10<br/><br/>    def must_wait(self, exists=True, timeout=None):<br/>        &quot;&quot;&quot; wait and if not found raise UiObjectNotFoundError &quot;&quot;&quot;<br/>        if not self.wait(exists, timeout):<br/>&gt;           raise UiObjectNotFoundError({&#x27;code&#x27;: -32002, &#x27;data&#x27;: str(self.selector), &#x27;method&#x27;: &#x27;wait&#x27;})<br/><span class="error">E           uiautomator2.exceptions.UiObjectNotFoundError: -32002 Client error: &lt;&gt; data: Selector [resourceId=&#x27;com.tencent.mm:id/dub&#x27;, text=&#x27;发现&#x27;], method: None</span><br/><br/>venv/lib/python3.8/site-packages/uiautomator2/_selector.py:345: UiObjectNotFoundError<br/><br/>During handling of the above exception, another exception occurred:<br/><br/>self = &lt;ebuy_app.testcase.djc_demo.test_005.TestAppLets object at 0x1230c4370&gt;, device_name = &#x27;10.15.20.72:20001&#x27;<br/><br/>    @allure.feature(&#x27;UI测试demo&#x27;)<br/>    @allure.title(&quot;打开微信，进入小程序首页，断言成功&quot;)<br/>    @allure.severity(&#x27;blocker&#x27;)<br/>    @allure.description(&quot;打开微信，登录小程序，进入小熊麦麦首页&quot;)<br/>    def test_into_home_000(self, device_name):<br/>    <br/>        try:<br/>            e_buy_home_img_except = &quot;/Users/dongjunchao/Desktop/ebuy_app/statics/exce_img/e_buy_home_offline.jpg&quot;<br/>            d = u2.connect(device_name)<br/>            d.implicitly_wait(15.0)<br/>    <br/>            screen_status = d.info.get(&#x27;screenOn&#x27;)<br/>            if not screen_status:<br/>                d.screen_on()<br/>                d.swipe_ext(&quot;up&quot;, 0.6)<br/>                time.sleep(3)<br/>    <br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            d.press(&quot;home&quot;)<br/>            time.sleep(1)<br/>    <br/>            d(description=&quot;第2屏&quot;).click()<br/>            d(resourceId=&quot;com.miui.home:id/icon_icon&quot;, description=&quot;微信&quot;).click()<br/>    <br/>            # d.app_start(&quot;com.tencent.mm&quot;, wait=True)<br/>            time.sleep(3)<br/>    <br/>            # 判断是否在微信首页-发现页<br/>            found_icon = d(resourceId=&quot;com.tencent.mm:id/dub&quot;, text=&quot;发现&quot;)<br/>            if not found_icon.exists:<br/>                # d(resourceId=&quot;com.tencent.mm:id/dn&quot;, description=&quot;返回&quot;).click()<br/>                d.press(&quot;back&quot;)<br/>            found_icon.click(timeout=10)<br/>            time.sleep(3)<br/>            my_found_pic = img.save_screen_img(d, &#x27;my_found_page&#x27;, device_name)  # 发现页截图<br/>    <br/>            # 进入小程序<br/>            applet_icon = d(resourceId=&quot;android:id/title&quot;, text=&quot;小程序&quot;)<br/>            applet_icon.click()<br/>            time.sleep(3)<br/>            applets_pic = img.save_screen_img(d, &#x27;applet_page&#x27;, device_name)  # 小程序页截图<br/>    <br/>            d.xpath(&#x27;//androidx.appcompat.widget.LinearLayoutCompat&#x27;).click()<br/>            time.sleep(1)<br/>            d.send_keys(&quot;云品智能&quot;, clear=True)<br/>            time.sleep(1)<br/>    <br/>            d.click(0.222, 0.193)<br/>            time.sleep(5)<br/>            shou_ye = img.save_screen_img(d, &#x27;shou_ye&#x27;, device_name)<br/>    <br/>            time.sleep(15)<br/>    <br/>            d.press(&quot;home&quot;)<br/>            d.app_stop(&quot;com.tencent.mm&quot;)<br/>    <br/>            comment = [&#x27;e Buy Life&#x27;, &#x27;For your better life!&#x27;, &#x27;精选商品&#x27;]<br/>            result = as_i.assert_images(device_name, e_buy_home_img_except, shou_ye, comment)<br/>            log.info(3)<br/>            # ocr 结果<br/>            ocr_result = result.get(&#x27;ocr_result&#x27;)<br/>            ocr_description = str(result.get(&#x27;ocr_description&#x27;))<br/>    <br/>            # 图片对比<br/>            compare_img = result.get(&#x27;compare_img_path&#x27;)<br/>    <br/>            similar_description = str(result.get(&#x27;similar_data&#x27;))<br/>            pHash = result.get(&#x27;similar_data&#x27;).get(&#x27;pHash&#x27;)<br/>            aHash = result.get(&#x27;similar_data&#x27;).get(&#x27;aHash&#x27;)<br/>            third_res = result.get(&#x27;similar_data&#x27;).get(&#x27;third_res&#x27;)<br/>            log.info(4)<br/>            if ocr_result:<br/>                if pHash &lt; 25 and aHash &lt; 10:<br/>                    if third_res and third_res &gt; 0.95:<br/>                        is_similar = True<br/>                    else:<br/>                        is_similar = True<br/>                else:<br/>                    is_similar = False<br/>            else:<br/>                is_similar = False<br/>            log.info(5)<br/>            # 截图<br/>            AllureReport.show_step(&#x27;手机型号&#x27;, device_name)<br/>            AllureReport.show_pic(e_buy_home_img_except, &#x27;预期-首页截图&#x27;)<br/>            AllureReport.show_pic(my_found_pic, &#x27;发现页截图&#x27;)<br/>            AllureReport.show_pic(applets_pic, &#x27;小程序页截图&#x27;)<br/>            AllureReport.show_pic(shou_ye, &#x27;实际-首页截图&#x27;)<br/>            AllureReport.show_pic(compare_img, &#x27;预期-实际比对效果&#x27;)<br/>    <br/>            AllureReport.show_step(&#x27;ocr光学文字识别&#x27;, ocr_description)<br/>            AllureReport.show_step(&#x27;图像相似度计算结果&#x27;, similar_description)<br/>    <br/>            # assert is_similar<br/>    <br/>        except Exception:<br/>&gt;           assert 1 == 2<br/><span class="error">E           assert 1 == 2</span><br/><br/>testcase/djc_demo/test_005.py:115: AssertionError<br/> ------------------------------Captured stderr call------------------------------ <br/>[D 210624 09:48:48 __init__:634] kill process(ps): uiautomator
+[D 210624 09:48:49 init:59] Use cached assets: /Users/dongjunchao/.uiautomator2/cache/app-uiautomator.apk-d3f17174fb/app-uiautomator.apk
+[D 210624 09:48:50 __init__:365] pm install /data/local/tmp/app-uiautomator.apk
+[D 210624 09:48:51 init:59] Use cached assets: /Users/dongjunchao/.uiautomator2/cache/app-uiautomator-test.apk-652bf9e13c/app-uiautomator-test.apk
+[D 210624 09:48:52 __init__:365] pm install /data/local/tmp/app-uiautomator-test.apk
+[D 210624 09:48:53 __init__:651] uiautomator-v2 is starting ... left: 40.0s
+[D 210624 09:48:54 __init__:651] uiautomator-v2 is starting ... left: 39.0s
+[D 210624 09:48:55 __init__:651] uiautomator-v2 is starting ... left: 37.9s
+[I 210624 09:48:55 __init__:617] uiautomator back to normal
+<br/> -------------------------------Captured log call-------------------------------- <br/>DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:227 Starting new HTTP connection (1): 10.15.20.72:20001
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /version HTTP/1.1&quot; 200 6
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 47
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;DELETE /services/uiautomator HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 120427
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 115
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 5973
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /upload/data/local/tmp/app-uiautomator.apk HTTP/1.1&quot; 200 77
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /upload/data/local/tmp/app-uiautomator-test.apk HTTP/1.1&quot; 200 82
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /shell HTTP/1.1&quot; 200 48
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /services/uiautomator HTTP/1.1&quot; 200 53
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /services/uiautomator HTTP/1.1&quot; 200 31
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /services/uiautomator HTTP/1.1&quot; 200 31
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 502 0
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;GET /services/uiautomator HTTP/1.1&quot; 200 31
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 196
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 223
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 291
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 89
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 305
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 88
+DEBUG    urllib3.connectionpool:connectionpool.py:452 http://10.15.20.72:20001 &quot;POST /jsonrpc/0 HTTP/1.1&quot; 200 90<br/></div></td></tr></tbody></table></body></html>

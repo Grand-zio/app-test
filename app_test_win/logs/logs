@@ -1,0 +1,221 @@
+2021-06-21 15:25:27,644 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\111'
+2021-06-21 15:26:27,067 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\111'
+2021-06-21 15:26:43,506 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\111'
+2021-06-21 15:28:55,613 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\test_001.py'
+2021-06-21 15:30:49,154 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\test_001.py'
+2021-06-21 16:59:19,276 - logs - ERROR - <class 'smtplib.SMTPException'>
+2021-06-21 17:23:05,278 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:23:05,326 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 17:26:40,983 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:26:41,008 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:27:01,842 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:27:01,866 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:27:23,685 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:27:23,710 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:28:25,943 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:28:25,971 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:38:52,022 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:38:52,057 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:57:46,201 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:57:46,227 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:58:45,655 - logs - ERROR - must be str, not list
+2021-06-21 17:58:45,655 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 17:58:45,655 - logs - INFO - --------------结束---------------
+2021-06-21 18:03:04,420 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:03:04,448 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 18:04:09,814 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 18:04:09,814 - logs - INFO - --------------结束---------------
+2021-06-21 18:41:35,894 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:41:35,927 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 18:41:36,026 - logs - INFO - 设备[]已释放
+2021-06-21 18:41:36,027 - logs - INFO - --------------结束---------------
+2021-06-21 18:42:23,936 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:42:23,961 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 18:43:23,956 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 18:43:23,957 - logs - INFO - --------------结束---------------
+2021-06-21 18:44:51,646 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:44:51,670 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 18:45:43,256 - logs - INFO - ocr光学文字识别结果：[{'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '啊哦,有什么出问题了'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-21 18:45:46,831 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.92576974630356, 'default': {'aHash': 12, 'dHash': 15, 'pHash': 66, 'classify_hist_with_split': 0.5840595364570618, 'calculate': 0.5979909300804138}}
+2021-06-21 18:46:16,383 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 18:46:16,383 - logs - INFO - --------------结束---------------
+2021-06-21 18:57:02,272 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:57:02,297 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:00:22,194 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:00:22,220 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 19:00:22,331 - logs - INFO - -----用例执行完成------
+2021-06-21 19:00:22,331 - logs - INFO - -----报告转换完成------
+2021-06-21 19:06:13,075 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:06:13,103 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 19:06:13,216 - logs - INFO - -----用例执行完成------
+2021-06-21 19:06:13,217 - logs - INFO - -----报告转换完成------
+2021-06-21 19:06:48,943 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:06:48,972 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 19:06:49,070 - logs - INFO - -----用例执行完成------
+2021-06-21 19:06:49,070 - logs - INFO - -----报告转换完成------
+2021-06-21 19:06:49,072 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:06:49,072 - logs - INFO - 设备[]已释放
+2021-06-21 19:06:49,072 - logs - INFO - --------------结束---------------
+2021-06-21 19:08:23,492 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:08:23,520 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:08:24,766 - logs - INFO - -----用例执行完成------
+2021-06-21 19:08:24,766 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:08:28,007 - logs - INFO - -----报告转换完成------
+2021-06-21 19:08:28,116 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:08:28,136 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:08:28,136 - logs - INFO - --------------结束---------------
+2021-06-21 19:12:00,743 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:12:00,768 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:12:02,029 - logs - INFO - -----用例执行完成------
+2021-06-21 19:12:02,030 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:12:04,741 - logs - INFO - -----报告转换完成------
+2021-06-21 19:12:04,861 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:12:04,883 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:12:04,883 - logs - INFO - --------------结束---------------
+2021-06-21 19:15:02,433 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:15:02,459 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:15:03,744 - logs - INFO - -----用例执行完成------
+2021-06-21 19:15:03,744 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:21:11,907 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:21:11,932 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:22:17,273 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP P'}, {'words': '100'}, {'words': '小熊麦麦'}]
+2021-06-21 19:22:20,532 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.66705936193466, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 80, 'classify_hist_with_split': 0.16976970434188843, 'calculate': 0.14345046877861023}}
+2021-06-21 19:22:21,007 - logs - INFO - 3
+2021-06-21 19:22:21,007 - logs - INFO - 4
+2021-06-21 19:22:21,007 - logs - INFO - 5
+2021-06-21 19:23:05,255 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP P'}, {'words': '100'}, {'words': '小熊麦麦'}]
+2021-06-21 19:23:08,804 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.62518489360809, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 81, 'classify_hist_with_split': 0.16566704213619232, 'calculate': 0.1369968056678772}}
+2021-06-21 19:23:09,587 - logs - INFO - 3
+2021-06-21 19:23:09,587 - logs - INFO - 4
+2021-06-21 19:23:09,588 - logs - INFO - 5
+2021-06-21 19:23:10,304 - logs - INFO - -----用例执行完成------
+2021-06-21 19:23:10,304 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:23:13,272 - logs - INFO - -----报告转换完成------
+2021-06-21 19:23:13,483 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:23:13,502 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:23:13,502 - logs - INFO - --------------结束---------------
+2021-06-21 19:27:59,983 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:28:00,008 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:28:51,772 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP e P'}, {'words': '小熊麦麦'}]
+2021-06-21 19:28:55,474 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.66062378883362, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 79, 'classify_hist_with_split': 0.1782950907945633, 'calculate': 0.1422095000743866}}
+2021-06-21 19:28:55,931 - logs - INFO - 3
+2021-06-21 19:28:55,931 - logs - INFO - 4
+2021-06-21 19:28:55,931 - logs - INFO - 5
+2021-06-21 19:29:40,711 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP e P'}, {'words': '囟'}, {'words': '小熊麦麦'}]
+2021-06-21 19:29:43,554 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.61738181114197, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 81, 'classify_hist_with_split': 0.17729027569293976, 'calculate': 0.1348530799150467}}
+2021-06-21 19:29:44,754 - logs - INFO - 3
+2021-06-21 19:29:44,754 - logs - INFO - 4
+2021-06-21 19:29:44,755 - logs - INFO - 5
+2021-06-21 19:29:45,472 - logs - INFO - -----用例执行完成------
+2021-06-21 19:29:45,473 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:29:48,417 - logs - INFO - -----报告转换完成------
+2021-06-21 19:29:48,625 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:29:48,645 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:29:48,645 - logs - INFO - --------------结束---------------
+2021-06-21 19:43:46,475 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:43:46,501 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:44:46,674 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上7:44'}, {'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-21 19:44:50,057 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97687089443207, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 50, 'classify_hist_with_split': 0.5853631496429443, 'calculate': 0.5838897824287415}}
+2021-06-21 19:44:50,529 - logs - INFO - 3
+2021-06-21 19:44:50,529 - logs - INFO - 4
+2021-06-21 19:44:50,530 - logs - INFO - 5
+2021-06-21 19:45:39,428 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上7:45'}, {'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-21 19:45:42,672 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97698390483856, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 50, 'classify_hist_with_split': 0.5871960520744324, 'calculate': 0.583442747592926}}
+2021-06-21 19:45:43,459 - logs - INFO - 3
+2021-06-21 19:45:43,459 - logs - INFO - 4
+2021-06-21 19:45:43,460 - logs - INFO - 5
+2021-06-21 19:45:44,250 - logs - INFO - -----用例执行完成------
+2021-06-21 19:45:44,250 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:45:47,174 - logs - INFO - -----报告转换完成------
+2021-06-21 19:45:47,390 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:45:47,409 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:45:47,409 - logs - INFO - --------------结束---------------
+2021-06-22 15:49:20,615 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 15:49:20,642 - logs - INFO - There has no online devices in ATX-Server
+2021-06-22 15:49:44,651 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 15:49:44,693 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20019']}}
+2021-06-22 16:17:20,214 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 16:17:20,272 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20019']}}
+2021-06-22 16:17:21,468 - logs - INFO - -----用例执行完成------
+2021-06-22 16:17:21,468 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-22 16:21:32,950 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 16:21:32,992 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20022']}}
+2021-06-22 16:22:29,672 - logs - INFO - ocr光学文字识别结果：[{'words': '下午4:22'}, {'words': '<Q云品智能'}, {'words': '8取消'}, {'words': '常用小程序'}, {'words': '云品智能'}, {'words': '发现更多'}, {'words': '热门小程序'}, {'words': '外语学习小程序'}, {'words': '在线漫画小程序'}, {'words': '天气查询小程序'}, {'words': '书刊小说小程序'}, {'words': '出行服务小程序'}]
+2021-06-22 16:22:33,028 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.67004501819611, 'default': {'aHash': 23, 'dHash': 14, 'pHash': 79, 'classify_hist_with_split': 0.20378339290618896, 'calculate': 0.24115383625030518}}
+2021-06-22 16:22:33,551 - logs - INFO - 3
+2021-06-22 16:22:33,551 - logs - INFO - 4
+2021-06-22 16:22:33,551 - logs - INFO - 5
+2021-06-22 16:23:22,791 - logs - INFO - ocr光学文字识别结果：[{'words': '下午4:23'}, {'words': '囟今'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-22 16:23:26,252 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97692692279816, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 49, 'classify_hist_with_split': 0.5878369212150574, 'calculate': 0.5850797295570374}}
+2021-06-22 16:23:26,983 - logs - INFO - 3
+2021-06-22 16:23:26,983 - logs - INFO - 4
+2021-06-22 16:23:26,983 - logs - INFO - 5
+2021-06-22 16:23:27,738 - logs - INFO - -----用例执行完成------
+2021-06-22 16:23:27,738 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-22 16:23:30,640 - logs - INFO - -----报告转换完成------
+2021-06-22 16:23:30,862 - logs - INFO - -----报告压缩完成------
+2021-06-22 16:23:30,881 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20022']}}已释放
+2021-06-22 16:23:30,881 - logs - INFO - --------------结束---------------
+2021-06-22 20:24:43,746 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:24:43,785 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20048']}}
+2021-06-22 20:25:40,837 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上8:25'}, {'words': '囟会c'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-22 20:25:43,991 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97675752639771, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 49, 'classify_hist_with_split': 0.5887152552604675, 'calculate': 0.5839855074882507}}
+2021-06-22 20:25:44,495 - logs - INFO - 3
+2021-06-22 20:25:44,495 - logs - INFO - 4
+2021-06-22 20:25:44,495 - logs - INFO - 5
+2021-06-22 20:26:38,887 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上8:26'}, {'words': '囟贪'}, {'words': '100'}, {'words': '咖'}, {'words': '小红书'}, {'words': '网易云音乐'}, {'words': '微信'}, {'words': 'DJI Mimo'}, {'words': '叫渠'}, {'words': '消费扶贫'}, {'words': '花生地铁'}, {'words': '东方航空'}, {'words': '24集'}, {'words': '●'}]
+2021-06-22 20:26:42,073 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.51288360357285, 'default': {'aHash': 9, 'dHash': 53, 'pHash': 109, 'classify_hist_with_split': 0.2449420690536499, 'calculate': 0.22723354399204254}}
+2021-06-22 20:26:42,826 - logs - INFO - 3
+2021-06-22 20:26:42,826 - logs - INFO - 4
+2021-06-22 20:26:42,826 - logs - INFO - 5
+2021-06-22 20:26:43,479 - logs - INFO - -----用例执行完成------
+2021-06-22 20:26:43,479 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-22 20:26:46,693 - logs - INFO - -----报告转换完成------
+2021-06-22 20:26:46,917 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:26:46,929 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20048']}}已释放
+2021-06-22 20:26:46,929 - logs - INFO - --------------结束---------------
+2021-06-22 20:28:13,483 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:28:13,565 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20056']}}
+2021-06-22 20:28:13,565 - logs - INFO - 1
+2021-06-22 20:29:09,550 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上8:28'}, {'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-22 20:29:13,005 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97737365961075, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 50, 'classify_hist_with_split': 0.5877068638801575, 'calculate': 0.5838374495506287}}
+2021-06-22 20:29:13,482 - logs - INFO - 3
+2021-06-22 20:29:13,482 - logs - INFO - 4
+2021-06-22 20:29:13,482 - logs - INFO - 5
+2021-06-22 20:30:02,361 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上8:29'}, {'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-22 20:30:06,518 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97709292173386, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 50, 'classify_hist_with_split': 0.5859336256980896, 'calculate': 0.5833059549331665}}
+2021-06-22 20:30:07,316 - logs - INFO - 3
+2021-06-22 20:30:07,316 - logs - INFO - 4
+2021-06-22 20:30:07,316 - logs - INFO - 5
+2021-06-22 20:30:08,254 - logs - INFO - -----用例执行完成------
+2021-06-22 20:30:08,255 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-22 20:30:11,255 - logs - INFO - -----报告转换完成------
+2021-06-22 20:30:11,464 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:30:11,485 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20056']}}已释放
+2021-06-22 20:30:11,485 - logs - INFO - --------------结束---------------
+2021-06-22 20:32:19,084 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:32:19,139 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20059']}}
+2021-06-22 20:32:19,140 - logs - INFO - 1
+2021-06-22 20:32:19,140 - logs - INFO - SERVER
+2021-06-22 20:32:19,140 - logs - INFO - 2
+2021-06-22 20:32:19,140 - logs - INFO - ['10.15.20.72:20059']
+2021-06-22 20:32:19,180 - logs - INFO - 10.15.20.72:20059
+2021-06-22 20:32:27,472 - logs - INFO - -----用例执行完成------
+2021-06-22 20:32:27,472 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-22 20:32:30,292 - logs - INFO - -----报告转换完成------
+2021-06-22 20:32:30,407 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:32:30,425 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20059']}}已释放
+2021-06-22 20:32:30,426 - logs - INFO - --------------结束---------------
+2021-06-22 20:37:03,439 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:37:03,482 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20065']}}
+2021-06-22 20:37:03,482 - logs - INFO - 1
+2021-06-22 20:37:03,482 - logs - INFO - SERVER
+2021-06-22 20:37:03,482 - logs - INFO - 2
+2021-06-22 20:37:03,482 - logs - INFO - ['10.15.20.72:20065']
+2021-06-22 20:37:03,522 - logs - INFO - 10.15.20.72:20065
+2021-06-22 20:37:11,591 - logs - INFO - -----用例执行完成------
+2021-06-22 20:37:11,591 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-22 20:37:14,405 - logs - INFO - -----报告转换完成------
+2021-06-22 20:37:14,520 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:37:14,537 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20065']}}已释放
+2021-06-22 20:37:14,537 - logs - INFO - --------------结束---------------

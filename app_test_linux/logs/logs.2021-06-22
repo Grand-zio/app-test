@@ -1,0 +1,271 @@
+2021-06-21 15:25:27,644 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\111'
+2021-06-21 15:26:27,067 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\111'
+2021-06-21 15:26:43,506 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\111'
+2021-06-21 15:28:55,613 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\test_001.py'
+2021-06-21 15:30:49,154 - logs - ERROR - [WinError 3] 系统找不到指定的路径。: 'D:\\work\\code\\project_test\\ebuy_app\\testcase\\test_001.py'
+2021-06-21 16:59:19,276 - logs - ERROR - <class 'smtplib.SMTPException'>
+2021-06-21 17:23:05,278 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:23:05,326 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 17:26:40,983 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:26:41,008 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:27:01,842 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:27:01,866 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:27:23,685 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:27:23,710 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:28:25,943 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:28:25,971 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:38:52,022 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:38:52,057 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:57:46,201 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 17:57:46,227 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 17:58:45,655 - logs - ERROR - must be str, not list
+2021-06-21 17:58:45,655 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 17:58:45,655 - logs - INFO - --------------结束---------------
+2021-06-21 18:03:04,420 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:03:04,448 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 18:04:09,814 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 18:04:09,814 - logs - INFO - --------------结束---------------
+2021-06-21 18:41:35,894 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:41:35,927 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 18:41:36,026 - logs - INFO - 设备[]已释放
+2021-06-21 18:41:36,027 - logs - INFO - --------------结束---------------
+2021-06-21 18:42:23,936 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:42:23,961 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 18:43:23,956 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 18:43:23,957 - logs - INFO - --------------结束---------------
+2021-06-21 18:44:51,646 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:44:51,670 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 18:45:43,256 - logs - INFO - ocr光学文字识别结果：[{'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '啊哦,有什么出问题了'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-21 18:45:46,831 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.92576974630356, 'default': {'aHash': 12, 'dHash': 15, 'pHash': 66, 'classify_hist_with_split': 0.5840595364570618, 'calculate': 0.5979909300804138}}
+2021-06-21 18:46:16,383 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 18:46:16,383 - logs - INFO - --------------结束---------------
+2021-06-21 18:57:02,272 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 18:57:02,297 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:00:22,194 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:00:22,220 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 19:00:22,331 - logs - INFO - -----用例执行完成------
+2021-06-21 19:00:22,331 - logs - INFO - -----报告转换完成------
+2021-06-21 19:06:13,075 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:06:13,103 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 19:06:13,216 - logs - INFO - -----用例执行完成------
+2021-06-21 19:06:13,217 - logs - INFO - -----报告转换完成------
+2021-06-21 19:06:48,943 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:06:48,972 - logs - INFO - There has no online devices in ATX-Server
+2021-06-21 19:06:49,070 - logs - INFO - -----用例执行完成------
+2021-06-21 19:06:49,070 - logs - INFO - -----报告转换完成------
+2021-06-21 19:06:49,072 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:06:49,072 - logs - INFO - 设备[]已释放
+2021-06-21 19:06:49,072 - logs - INFO - --------------结束---------------
+2021-06-21 19:08:23,492 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:08:23,520 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:08:24,766 - logs - INFO - -----用例执行完成------
+2021-06-21 19:08:24,766 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:08:28,007 - logs - INFO - -----报告转换完成------
+2021-06-21 19:08:28,116 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:08:28,136 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:08:28,136 - logs - INFO - --------------结束---------------
+2021-06-21 19:12:00,743 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:12:00,768 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:12:02,029 - logs - INFO - -----用例执行完成------
+2021-06-21 19:12:02,030 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:12:04,741 - logs - INFO - -----报告转换完成------
+2021-06-21 19:12:04,861 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:12:04,883 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:12:04,883 - logs - INFO - --------------结束---------------
+2021-06-21 19:15:02,433 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:15:02,459 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:15:03,744 - logs - INFO - -----用例执行完成------
+2021-06-21 19:15:03,744 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:21:11,907 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:21:11,932 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:22:17,273 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP P'}, {'words': '100'}, {'words': '小熊麦麦'}]
+2021-06-21 19:22:20,532 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.66705936193466, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 80, 'classify_hist_with_split': 0.16976970434188843, 'calculate': 0.14345046877861023}}
+2021-06-21 19:22:21,007 - logs - INFO - 3
+2021-06-21 19:22:21,007 - logs - INFO - 4
+2021-06-21 19:22:21,007 - logs - INFO - 5
+2021-06-21 19:23:05,255 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP P'}, {'words': '100'}, {'words': '小熊麦麦'}]
+2021-06-21 19:23:08,804 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.62518489360809, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 81, 'classify_hist_with_split': 0.16566704213619232, 'calculate': 0.1369968056678772}}
+2021-06-21 19:23:09,587 - logs - INFO - 3
+2021-06-21 19:23:09,587 - logs - INFO - 4
+2021-06-21 19:23:09,588 - logs - INFO - 5
+2021-06-21 19:23:10,304 - logs - INFO - -----用例执行完成------
+2021-06-21 19:23:10,304 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:23:13,272 - logs - INFO - -----报告转换完成------
+2021-06-21 19:23:13,483 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:23:13,502 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:23:13,502 - logs - INFO - --------------结束---------------
+2021-06-21 19:27:59,983 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:28:00,008 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:28:51,772 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP e P'}, {'words': '小熊麦麦'}]
+2021-06-21 19:28:55,474 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.66062378883362, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 79, 'classify_hist_with_split': 0.1782950907945633, 'calculate': 0.1422095000743866}}
+2021-06-21 19:28:55,931 - logs - INFO - 3
+2021-06-21 19:28:55,931 - logs - INFO - 4
+2021-06-21 19:28:55,931 - logs - INFO - 5
+2021-06-21 19:29:40,711 - logs - INFO - ocr光学文字识别结果：[{'words': 'dP e P'}, {'words': '囟'}, {'words': '小熊麦麦'}]
+2021-06-21 19:29:43,554 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.61738181114197, 'default': {'aHash': 24, 'dHash': 9, 'pHash': 81, 'classify_hist_with_split': 0.17729027569293976, 'calculate': 0.1348530799150467}}
+2021-06-21 19:29:44,754 - logs - INFO - 3
+2021-06-21 19:29:44,754 - logs - INFO - 4
+2021-06-21 19:29:44,755 - logs - INFO - 5
+2021-06-21 19:29:45,472 - logs - INFO - -----用例执行完成------
+2021-06-21 19:29:45,473 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:29:48,417 - logs - INFO - -----报告转换完成------
+2021-06-21 19:29:48,625 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:29:48,645 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:29:48,645 - logs - INFO - --------------结束---------------
+2021-06-21 19:43:46,475 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-21 19:43:46,501 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-21 19:44:46,674 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上7:44'}, {'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-21 19:44:50,057 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97687089443207, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 50, 'classify_hist_with_split': 0.5853631496429443, 'calculate': 0.5838897824287415}}
+2021-06-21 19:44:50,529 - logs - INFO - 3
+2021-06-21 19:44:50,529 - logs - INFO - 4
+2021-06-21 19:44:50,530 - logs - INFO - 5
+2021-06-21 19:45:39,428 - logs - INFO - ocr光学文字识别结果：[{'words': '晚上7:45'}, {'words': '100'}, {'words': '小熊麦麦'}, {'words': 'Buy Life'}, {'words': 'For your better life!'}, {'words': '√全球精选'}, {'words': '100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': 'L'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-21 19:45:42,672 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.97698390483856, 'default': {'aHash': 11, 'dHash': 13, 'pHash': 50, 'classify_hist_with_split': 0.5871960520744324, 'calculate': 0.583442747592926}}
+2021-06-21 19:45:43,459 - logs - INFO - 3
+2021-06-21 19:45:43,459 - logs - INFO - 4
+2021-06-21 19:45:43,460 - logs - INFO - 5
+2021-06-21 19:45:44,250 - logs - INFO - -----用例执行完成------
+2021-06-21 19:45:44,250 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\79d340b8 -o D:\work\code\project_test\ebuy_app\reports\html\79d340b8
+2021-06-21 19:45:47,174 - logs - INFO - -----报告转换完成------
+2021-06-21 19:45:47,390 - logs - INFO - -----报告压缩完成------
+2021-06-21 19:45:47,409 - logs - INFO - 设备['79d340b8']已释放
+2021-06-21 19:45:47,409 - logs - INFO - --------------结束---------------
+2021-06-22 14:01:14,957 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:01:15,009 - logs - INFO - There has no online devices in ATX-Server
+2021-06-22 14:05:00,185 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:05:00,230 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-22 14:06:06,517 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:06:06,557 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-22 14:06:07,559 - logs - INFO - -----用例执行完成------
+2021-06-22 14:06:07,560 - logs - INFO - cmd.exe /c allure generate /Users/dongjunchao/Desktop/ebuy_app/reports/xml/79d340b8 -o /Users/dongjunchao/Desktop/ebuy_app/reports/html/79d340b8
+2021-06-22 14:06:07,576 - logs - INFO - -----报告转换完成------
+2021-06-22 14:06:07,578 - logs - INFO - -----报告压缩完成------
+2021-06-22 14:06:07,801 - logs - INFO - 设备['79d340b8']已释放
+2021-06-22 14:06:07,801 - logs - INFO - --------------结束---------------
+2021-06-22 14:32:48,617 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:32:48,652 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-22 14:32:50,083 - logs - INFO - -----用例执行完成------
+2021-06-22 14:32:50,083 - logs - INFO - -----报告转换完成------
+2021-06-22 14:32:50,084 - logs - INFO - -----报告压缩完成------
+2021-06-22 14:32:50,112 - logs - INFO - 设备['79d340b8']已释放
+2021-06-22 14:32:50,112 - logs - INFO - --------------结束---------------
+2021-06-22 14:33:23,350 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:33:23,389 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-22 14:33:24,334 - logs - INFO - -----用例执行完成------
+2021-06-22 14:33:24,334 - logs - INFO - -----报告转换完成------
+2021-06-22 14:33:24,335 - logs - INFO - -----报告压缩完成------
+2021-06-22 14:33:24,367 - logs - INFO - 设备['79d340b8']已释放
+2021-06-22 14:33:24,368 - logs - INFO - --------------结束---------------
+2021-06-22 14:43:42,026 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:43:43,068 - logs - INFO - There has no online devices in ATX-Server
+2021-06-22 14:44:03,573 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:44:03,741 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-22 14:47:37,846 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:47:37,891 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-22 14:48:01,636 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 14:48:01,674 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-22 14:48:01,917 - logs - ERROR - query error 10.15.20.72:20016: 无此设备或设备已占用
+2021-06-22 14:48:02,664 - logs - INFO - -----用例执行完成------
+2021-06-22 14:48:02,664 - logs - INFO - -----报告转换完成------
+2021-06-22 14:48:02,666 - logs - INFO - -----报告压缩完成------
+2021-06-22 14:48:02,693 - logs - ERROR - 403 Client Error: Forbidden for url: http://10.15.10.209:8998/api/v1/user/devices/10.15.20.72:20016
+2021-06-22 14:48:02,693 - logs - INFO - 设备['10.15.20.72:20016']已释放
+2021-06-22 14:48:02,694 - logs - INFO - --------------结束---------------
+2021-06-22 20:05:35,125 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:05:35,200 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20030']}}
+2021-06-22 20:05:36,115 - logs - INFO - -----用例执行完成------
+2021-06-22 20:05:36,115 - logs - INFO - cmd.exe /c allure generate /Users/dongjunchao/Desktop/ebuy_app/reports/xml/79d340b8 -o /Users/dongjunchao/Desktop/ebuy_app/reports/html/79d340b8
+2021-06-22 20:05:36,129 - logs - INFO - -----报告转换完成------
+2021-06-22 20:05:36,131 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:05:36,160 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20030']}}已释放
+2021-06-22 20:05:36,160 - logs - INFO - --------------结束---------------
+2021-06-22 20:06:07,116 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:06:07,234 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备',
+'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20033']}}
+2021-06-22 20:06:08,095 - logs - INFO - -----用例执行完成------
+2021-06-22 20:06:08,095 - logs - INFO - -----报告转换完成------
+2021-06-22 20:06:08,097 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:06:08,126 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20033']}}已释放
+2021-06-22 20:06:08,126 - logs - INFO - --------------结束---------------
+2021-06-22 20:11:10,512 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:11:10,627 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20036']}}
+2021-06-22 20:11:11,584 - logs - INFO - -----用例执行完成------
+2021-06-22 20:11:11,584 - logs - INFO - -----报告转换完成------
+2021-06-22 20:11:11,585 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:11:11,664 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20036']}}已释放
+2021-06-22 20:11:11,664 - logs - INFO - --------------结束---------------
+2021-06-22 20:15:28,805 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:15:29,005 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20039']}}
+2021-06-22 20:15:29,803 - logs - INFO - -----用例执行完成------
+2021-06-22 20:15:29,803 - logs - INFO - -----报告转换完成------
+2021-06-22 20:15:29,804 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:15:30,049 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20039']}}已释放
+2021-06-22 20:15:30,049 - logs - INFO - --------------结束---------------
+2021-06-22 20:18:39,242 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:18:39,323 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20042']}}
+2021-06-22 20:18:55,942 - logs - INFO - -----用例执行完成------
+2021-06-22 20:18:55,943 - logs - INFO - -----报告转换完成------
+2021-06-22 20:18:55,944 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:18:55,972 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20042']}}已释放
+2021-06-22 20:18:55,972 - logs - INFO - --------------结束---------------
+2021-06-22 20:22:02,222 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:22:02,361 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20045']}}
+2021-06-22 20:22:11,771 - logs - INFO - -----用例执行完成------
+2021-06-22 20:22:11,771 - logs - INFO - -----报告转换完成------
+2021-06-22 20:22:11,772 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:22:11,827 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20045']}}已释放
+2021-06-22 20:22:11,828 - logs - INFO - --------------结束---------------
+2021-06-22 20:45:12,814 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:45:12,886 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20068']}}
+2021-06-22 20:45:29,163 - logs - INFO - -----用例执行完成------
+2021-06-22 20:45:29,163 - logs - INFO - -----报告转换完成------
+2021-06-22 20:45:29,165 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:45:29,204 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20068']}}已释放
+2021-06-22 20:45:29,205 - logs - INFO - --------------结束---------------
+2021-06-22 20:46:18,875 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:46:18,968 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20071']}}
+2021-06-22 20:46:34,930 - logs - INFO - -----用例执行完成------
+2021-06-22 20:46:34,930 - logs - INFO - -----报告转换完成------
+2021-06-22 20:46:34,931 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:46:35,054 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20071']}}已释放
+2021-06-22 20:46:35,054 - logs - INFO - --------------结束---------------
+2021-06-22 20:48:15,009 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:48:15,083 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20077']}}
+2021-06-22 20:48:30,344 - logs - INFO - -----用例执行完成------
+2021-06-22 20:48:30,344 - logs - INFO - -----报告转换完成------
+2021-06-22 20:48:30,345 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:48:30,385 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20077']}}已释放
+2021-06-22 20:48:30,385 - logs - INFO - --------------结束---------------
+2021-06-22 20:51:47,581 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:51:47,729 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20087']}}
+2021-06-22 20:52:08,143 - logs - INFO - -----用例执行完成------
+2021-06-22 20:52:08,144 - logs - INFO - -----报告转换完成------
+2021-06-22 20:52:08,145 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:52:08,168 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20087']}}已释放
+2021-06-22 20:52:08,168 - logs - INFO - --------------结束---------------
+2021-06-22 20:56:07,789 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:56:07,924 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20090']}}
+2021-06-22 20:56:27,363 - logs - INFO - -----用例执行完成------
+2021-06-22 20:56:27,363 - logs - INFO - -----报告转换完成------
+2021-06-22 20:56:27,364 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:56:27,392 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20090']}}已释放
+2021-06-22 20:56:27,392 - logs - INFO - --------------结束---------------
+2021-06-22 20:58:01,300 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 20:58:01,358 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20095']}}
+2021-06-22 20:58:16,711 - logs - INFO - -----用例执行完成------
+2021-06-22 20:58:16,711 - logs - INFO - -----报告转换完成------
+2021-06-22 20:58:16,712 - logs - INFO - -----报告压缩完成------
+2021-06-22 20:58:16,746 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20095']}}已释放
+2021-06-22 20:58:16,746 - logs - INFO - --------------结束---------------
+2021-06-22 21:27:36,930 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 21:27:37,044 - logs - INFO - There has no online devices in ATX-Server
+2021-06-22 21:27:37,044 - logs - INFO - -----用例执行完成------
+2021-06-22 21:27:37,044 - logs - INFO - -----报告转换完成------
+2021-06-22 21:27:37,045 - logs - INFO - -----报告压缩完成------
+2021-06-22 21:29:23,411 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-22 21:29:23,494 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20001']}}
+2021-06-22 21:30:30,709 - logs - INFO - -----用例执行完成------
+2021-06-22 21:30:30,709 - logs - INFO - -----报告转换完成------
+2021-06-22 21:30:30,711 - logs - INFO - -----报告压缩完成------
+2021-06-22 21:30:30,740 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20001']}}已释放
+2021-06-22 21:30:30,740 - logs - INFO - --------------结束---------------

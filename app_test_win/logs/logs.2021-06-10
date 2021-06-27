@@ -1,0 +1,46 @@
+2021-06-08 20:14:08,859 - logs - ERROR - [Errno 2] No such file or directory: 'D:\\work\\code\\ebuy_new\\uiautotest\\statics\\screenshot\\2.jpg'
+2021-06-08 20:14:56,839 - logs - ERROR - [Errno 2] No such file or directory: 'D:\\work\\code\\ebuy_new\\uiautotest\\statics\\screenshot\\2.jpg'
+2021-06-08 20:15:33,878 - logs - ERROR - [Errno 2] No such file or directory: 'D:\\work\\code\\ebuy_new\\uiautotest\\statics\\screenshot\\2.jpg'
+2021-06-08 20:16:06,579 - logs - ERROR - [Errno 2] No such file or directory: 'D:\\work\\code\\ebuy_new\\uiautotest\\statics\\screenshot\\2.jpg'
+2021-06-08 20:17:34,440 - logs - ERROR - [Errno 2] No such file or directory: 'D:\\work\\code\\ebuy_new\\uiautotest\\statics\\screenshot\\2.jpg'
+2021-06-08 20:18:15,901 - logs - ERROR - [Errno 2] No such file or directory: 'D:\\work\\code\\ebuy_new\\uiautotest\\statics\\screenshot\\2.jpg'
+2021-06-09 17:18:45,950 - logs - INFO - ocr光学文字识别结果：[{'words': '下午5:00'}, {'words': '必令分'}, {'words': '小熊麦麦'}, {'words': 'e Buy Life'}, {'words': 'For your better life!'}, {'words': '全球精选'}, {'words': '√100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': '这是我的底线'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2021-06-09 17:18:49,967 - logs - INFO - 图像相似度结果: {'platform': 'baidu', 'result': 0.91422361135483, 'default': {'aHash': 1, 'dHash': 2, 'pHash': 25, 'classify_hist_with_split': 0.7120987772941589, 'calculate': 0.7276164889335632}}
+2021-06-09 17:48:46,747 - logs - INFO - Start check 1 devices connected on PC: ['79d340b8'] 
+2021-06-09 17:56:14,319 - logs - INFO - Start check 1 devices connected on PC: ['10.15.40.97:5555'] 
+2021-06-09 18:54:30,425 - logs - INFO - Start check 1 devices connected on PC: ['10.15.40.97:5555'] 
+2021-06-09 18:55:41,232 - logs - INFO - Start check 2 devices connected on PC: ['79d340b8', '10.15.40.97:5555'] 
+2021-06-09 18:58:59,761 - logs - INFO - Start check 1 devices connected on PC: ['10.15.40.97:5555'] 
+2021-06-09 19:25:56,330 - logs - INFO - Start check 1 devices connected on PC: ['79d340b8'] 
+2021-06-09 19:44:15,180 - logs - INFO - Start check 1 devices connected on PC: ['79d340b8'] 
+2021-06-10 09:16:08,488 - logs - INFO - Start check 1 devices connected on PC: ['10.15.40.97:5010'] 
+2021-06-10 09:28:29,521 - logs - ERROR - 'NoneType' object has no attribute 'get'
+2021-06-10 09:28:42,281 - logs - ERROR - 'NoneType' object has no attribute 'get'
+2021-06-10 11:40:36,613 - logs - ERROR - 79d340b8 error: 设备未被占用无需释放
+2021-06-10 11:42:38,500 - logs - ERROR - 79d340b8 error: 设备未被占用无需释放
+2021-06-10 11:43:05,540 - logs - ERROR - 79d340b8 error: 设备未被占用无需释放
+2021-06-10 11:47:29,347 - logs - ERROR - 403 Client Error: Forbidden for url: http://10.15.10.209:8998/api/v1/user/devices
+2021-06-10 14:36:21,773 - logs - ERROR - argument of type 'NoneType' is not iterable
+2021-06-10 14:36:38,734 - logs - ERROR - argument of type 'NoneType' is not iterable
+2021-06-10 14:36:51,202 - logs - ERROR - query error f8827be4: 无此设备或设备已占用
+2021-06-10 14:37:12,239 - logs - ERROR - query error f8827be4: 无此设备或设备已占用
+2021-06-10 14:47:41,296 - logs - ERROR - query error 79d340b8: 无此设备或设备已占用
+2021-06-10 14:49:30,301 - logs - ERROR - query error 79d340b8: 无此设备或设备已占用
+2021-06-10 14:49:37,270 - logs - ERROR - query error 79d340b8: 无此设备或设备已占用
+2021-06-10 14:49:41,242 - logs - ERROR - query error 79d340b8: 无此设备或设备已占用
+2021-06-10 14:51:06,833 - logs - ERROR - query error 79d340b8: 无此设备或设备已占用
+2021-06-10 14:51:06,845 - logs - ERROR - 403 Client Error: Forbidden for url: http://10.15.10.209:8998/api/v1/user/devices/eeeeeeee
+2021-06-10 14:51:50,192 - logs - ERROR - query error 79d340b8: 无此设备或设备已占用
+2021-06-10 14:51:50,206 - logs - ERROR - 403 Client Error: Forbidden for url: http://10.15.10.209:8998/api/v1/user/devices/eeeeeeee
+2021-06-10 14:52:10,338 - logs - ERROR - query error 79d340b8: 无此设备或设备已占用
+2021-06-10 15:36:00,342 - logs - ERROR - query error c2a1596b: 无此设备或设备已占用
+2021-06-10 15:36:56,366 - logs - ERROR - query error : 无此设备或设备已占用
+2021-06-10 15:37:30,367 - logs - ERROR - query error : 无此设备或设备已占用
+2021-06-10 15:37:43,971 - logs - ERROR - query error : 无此设备或设备已占用
+2021-06-10 15:39:28,489 - logs - ERROR - query error : 无此设备或设备已占用
+2021-06-10 15:40:53,588 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-10 15:40:53,614 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-10 15:41:11,708 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-10 15:41:11,739 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']
+2021-06-10 17:27:43,269 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-10 17:27:43,295 - logs - INFO - There has 1 online devices in ATX-Server, devices: ['79d340b8']

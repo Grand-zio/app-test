@@ -1,0 +1,22 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "UI测试demo",
+    "children" : [ {
+      "name" : "打开微信，进入小程序首页，断言成功",
+      "uid" : "6bd1b128304759fb",
+      "parentUid" : "5465c4a7fb70a95933afb16f4943d677",
+      "status" : "broken",
+      "time" : {
+        "start" : 1624365429024,
+        "stop" : 1624365431040,
+        "duration" : 2016
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5465c4a7fb70a95933afb16f4943d677"
+  } ]
+}

@@ -1,0 +1,9 @@
+[D 210624 09:48:48 __init__:634] kill process(ps): uiautomator
+[D 210624 09:48:49 init:59] Use cached assets: /Users/dongjunchao/.uiautomator2/cache/app-uiautomator.apk-d3f17174fb/app-uiautomator.apk
+[D 210624 09:48:50 __init__:365] pm install /data/local/tmp/app-uiautomator.apk
+[D 210624 09:48:51 init:59] Use cached assets: /Users/dongjunchao/.uiautomator2/cache/app-uiautomator-test.apk-652bf9e13c/app-uiautomator-test.apk
+[D 210624 09:48:52 __init__:365] pm install /data/local/tmp/app-uiautomator-test.apk
+[D 210624 09:48:53 __init__:651] uiautomator-v2 is starting ... left: 40.0s
+[D 210624 09:48:54 __init__:651] uiautomator-v2 is starting ... left: 39.0s
+[D 210624 09:48:55 __init__:651] uiautomator-v2 is starting ... left: 37.9s
+[I 210624 09:48:55 __init__:617] uiautomator back to normal

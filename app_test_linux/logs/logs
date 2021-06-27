@@ -1,0 +1,8 @@
+2021-06-24 09:48:44,511 - logs - INFO - Get available online devices from ATX-Server...
+2021-06-24 09:48:44,600 - logs - INFO - {'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20001']}}
+2021-06-24 09:49:33,141 - logs - INFO - -----用例执行完成------
+2021-06-24 09:49:33,142 - logs - INFO - allure generate /Users/dongjunchao/Desktop/ebuy_app/reports/xml/79d340b8 -o /Users/dongjunchao/Desktop/ebuy_app/reports/html/79d340b8
+2021-06-24 09:49:33,187 - logs - INFO - -----报告转换完成------
+2021-06-24 09:49:33,189 - logs - INFO - -----报告压缩完成------
+2021-06-24 09:49:33,225 - logs - INFO - 设备{'device_info': {'method': 'SERVER', 'type': '全部设备', 'devices': ['79d340b8'], 'remote_id': ['10.15.20.72:20001']}}已释放
+2021-06-24 09:49:33,225 - logs - INFO - --------------结束---------------

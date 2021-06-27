@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DT-DONGJUNCHAO",
+    "children" : [ {
+      "name" : "3908-MainThread",
+      "children" : [ {
+        "name" : "打开微信，进入小程序首页，断言成功",
+        "uid" : "ac66afe4d5cd37d9",
+        "parentUid" : "ad5ec7df866b254bc4c94256225261c6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624365425682,
+          "stop" : 1624365427705,
+          "duration" : 2023
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "打开微信，进入小程序首页，断言成功",
+        "uid" : "6bd1b128304759fb",
+        "parentUid" : "ad5ec7df866b254bc4c94256225261c6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1624365429024,
+          "stop" : 1624365431040,
+          "duration" : 2016
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "ad5ec7df866b254bc4c94256225261c6"
+    } ],
+    "uid" : "0a61e2ae8db0ca0f521f5f35e5218f6a"
+  } ]
+}

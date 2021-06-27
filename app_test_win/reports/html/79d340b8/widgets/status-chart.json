@@ -1,0 +1,11 @@
+[ {
+  "uid" : "6bd1b128304759fb",
+  "name" : "打开微信，进入小程序首页，断言成功",
+  "time" : {
+    "start" : 1624365429024,
+    "stop" : 1624365431040,
+    "duration" : 2016
+  },
+  "status" : "broken",
+  "severity" : "blocker"
+} ]

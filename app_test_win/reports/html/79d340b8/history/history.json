@@ -1,0 +1,22 @@
+{
+  "f636f903c5dae63a550b64097398b26c" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "6bd1b128304759fb",
+      "status" : "broken",
+      "statusDetails" : "RuntimeError: USB device 10.15.20.72:20065 is offline",
+      "time" : {
+        "start" : 1624365429024,
+        "stop" : 1624365431040,
+        "duration" : 2016
+      }
+    } ]
+  }
+}

@@ -1,0 +1,57 @@
+2020-11-08 11:52:59,362 - logs - INFO - Device count: 2
+2020-11-08 11:52:59,364 - logs - INFO - can_use_device_list: [{'colding': False, 'createdAt': '2020-10-22T17:41:49.397000', 'department': 'ebuy', 'idleTimeout': 1200, 'lastActivatedAt': '2020-11-08T10:35:33.244000', 'owner': None, 'platform': 'android', 'present': True, 'properties': {'brand': 'Xiaomi', 'model': 'MI 5s', 'name': '小米 5S', 'propertyId': 'djc001', 'serial': 'c2a1596b', 'version': '7.0'}, 'udid': 'c2a1596b', 'updatedAt': '2020-11-08T09:53:38.982000', 'userId': None, 'using': False, 'usingBeganAt': '2020-11-08T10:35:33.244000', 'usingDuration': 12749.161999999995}]
+2020-11-08 11:52:59,595 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully added'}, 'devices': 'c2a1596b'}
+2020-11-08 11:53:49,935 - logs - INFO - ocr光学文字识别结果：[{'words': '上午11:53'}, {'words': '●@●'}, {'words': '小熊麦麦'}, {'words': ')*4天前购买了 VENUSAMY V宁小白盾75%'}, {'words': 'e Buy Life'}, {'words': 'For your better life!'}, {'words': '可'}, {'words': '√全球精选'}, {'words': '√100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': 'Venusamy'}, {'words': 'VENUSAMY V宁小白盾75%酒精免'}, {'words': 'YENUSAMY'}, {'words': '洗杀菌消毒喷雾 T VENUSAMY∨宁'}, {'words': '领券满100减992领券满100减10'}, {'words': '￥0.01￥994'}, {'words': '潘婷'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2020-11-08 11:53:53,061 - logs - INFO - 图像相似度结果: {'aHash': 1, 'dHash': 9, 'pHash': 21, 'classify_hist_with_split': 0.6459826231002808, 'calculate': 0.6259252429008484, 'third_res': 0.99717438220978}
+2020-11-08 11:53:54,254 - logs - INFO - -----用例执行完成------
+2020-11-08 11:53:54,254 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\c2a1596b -o D:\work\code\project_test\ebuy_app\reports\html\c2a1596b
+2020-11-08 11:53:57,273 - logs - INFO - -----报告转换完成------
+2020-11-08 11:54:02,896 - logs - INFO - -----邮件发送完成------
+2020-11-08 11:54:03,096 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully released'}, 'devices': 'c2a1596b'}
+2020-11-08 11:54:03,096 - logs - INFO - --------------结束---------------
+2020-11-08 15:35:30,517 - logs - INFO - Device count: 2
+2020-11-08 15:35:30,517 - logs - INFO - can_use_device_list: [{'colding': False, 'createdAt': '2020-10-22T17:41:49.397000', 'department': 'ebuy', 'idleTimeout': 600, 'lastActivatedAt': '2020-11-08T15:30:48.036000', 'owner': None, 'platform': 'android', 'present': True, 'properties': {'brand': 'Xiaomi', 'model': 'MI 5s', 'name': '小米 5S', 'propertyId': 'djc001', 'serial': 'c2a1596b', 'version': '7.0'}, 'udid': 'c2a1596b', 'updatedAt': '2020-11-08T09:53:38.982000', 'userId': None, 'using': False, 'usingBeganAt': '2020-11-08T15:30:48.036000', 'usingDuration': 15353.740999999998}]
+2020-11-08 15:35:30,744 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully added'}, 'devices': 'c2a1596b'}
+2020-11-08 15:36:23,318 - logs - INFO - ocr光学文字识别结果：[{'words': '下午3:36'}, {'words': '●@●'}, {'words': '小熊麦麦'}, {'words': 'N*e2周前购买了 LANCOME兰蔻清滢保湿.'}, {'words': 'e Buy Life'}, {'words': 'For your better life!'}, {'words': '可'}, {'words': '√全球精选'}, {'words': '√100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': 'Venusamy'}, {'words': 'VENUSAMY V宁小白盾75%酒精免'}, {'words': 'YENUSAMY'}, {'words': '洗杀菌消毒喷雾 T VENUSAMY∨宁'}, {'words': '领券满100减992领券满100减10'}, {'words': '￥0.01￥994'}, {'words': '潘婷'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2020-11-08 15:36:26,357 - logs - INFO - 图像相似度结果: {'aHash': 1, 'dHash': 9, 'pHash': 16, 'classify_hist_with_split': 0.6425588130950928, 'calculate': 0.6239966750144958, 'third_res': 0.99801290035248}
+2020-11-08 15:36:27,465 - logs - INFO - -----用例执行完成------
+2020-11-08 15:36:27,465 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\c2a1596b -o D:\work\code\project_test\ebuy_app\reports\html\c2a1596b
+2020-11-08 15:36:29,918 - logs - INFO - -----报告转换完成------
+2020-11-08 15:36:35,732 - logs - INFO - -----邮件发送完成------
+2020-11-08 15:36:35,920 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully released'}, 'devices': 'c2a1596b'}
+2020-11-08 15:36:35,920 - logs - INFO - --------------结束---------------
+2020-11-09 01:00:07,085 - logs - INFO - Device count: 2
+2020-11-09 01:00:07,086 - logs - INFO - can_use_device_list: [{'colding': False, 'createdAt': '2020-10-22T17:41:49.397000', 'department': 'ebuy', 'idleTimeout': 600, 'lastActivatedAt': '2020-11-08T16:13:57.629000', 'owner': None, 'platform': 'android', 'present': True, 'properties': {'brand': 'Xiaomi', 'model': 'MI 5s', 'name': '小米 5S', 'propertyId': 'djc001', 'serial': 'c2a1596b', 'version': '7.0'}, 'udid': 'c2a1596b', 'updatedAt': '2020-11-08T09:53:38.982000', 'userId': None, 'using': False, 'usingBeganAt': '2020-11-08T16:13:57.629000', 'usingDuration': 15611.413999999997}]
+2020-11-09 01:00:07,299 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully added'}, 'devices': 'c2a1596b'}
+2020-11-09 01:01:10,782 - logs - INFO - -----用例执行完成------
+2020-11-09 01:01:10,782 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\c2a1596b -o D:\work\code\project_test\ebuy_app\reports\html\c2a1596b
+2020-11-09 01:01:13,580 - logs - INFO - -----报告转换完成------
+2020-11-09 01:01:17,824 - logs - INFO - -----邮件发送完成------
+2020-11-09 01:01:18,027 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully released'}, 'devices': 'c2a1596b'}
+2020-11-09 01:01:18,028 - logs - INFO - --------------结束---------------
+2020-11-09 16:09:51,265 - logs - INFO - Device count: 2
+2020-11-09 16:09:51,266 - logs - INFO - can_use_device_list: [{'colding': False, 'createdAt': '2020-10-22T17:41:49.397000', 'department': 'ebuy', 'idleTimeout': 600, 'lastActivatedAt': '2020-11-09T01:00:07.333000', 'owner': None, 'platform': 'android', 'present': True, 'properties': {'brand': 'Xiaomi', 'model': 'MI 5s', 'name': '小米 5S', 'propertyId': 'djc001', 'serial': 'c2a1596b', 'version': '7.0'}, 'udid': 'c2a1596b', 'updatedAt': '2020-11-09T13:43:39.720000', 'userId': None, 'using': False, 'usingBeganAt': '2020-11-09T01:00:07.333000', 'usingDuration': 15682.149999999998}]
+2020-11-09 16:09:51,473 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully added'}, 'devices': 'c2a1596b'}
+2020-11-09 16:11:31,270 - logs - INFO - ocr光学文字识别结果：[{'words': '下午4:11'}, {'words': '●@●'}, {'words': '小熊麦麦'}, {'words': 'N*e2周前购买了 LANCOME兰蔻清滢保湿.'}, {'words': 'e Buy Life'}, {'words': 'For your better life!'}, {'words': '可'}, {'words': '√全球精选'}, {'words': '√100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': 'Venusamy'}, {'words': 'VENUSAMY V宁小白盾75%酒精免'}, {'words': 'YENUSAMY'}, {'words': '洗杀菌消毒喷雾 T VENUSAMY∨宁'}, {'words': '领券满100减992领券满100减10'}, {'words': '￥0.01￥994'}, {'words': '潘婷'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2020-11-09 16:11:34,605 - logs - INFO - 图像相似度结果: {'aHash': 1, 'dHash': 9, 'pHash': 16, 'classify_hist_with_split': 0.6429653167724609, 'calculate': 0.6240774393081665, 'third_res': 0.99843740463257}
+2020-11-09 16:11:35,875 - logs - INFO - -----用例执行完成------
+2020-11-09 16:11:35,876 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\c2a1596b -o D:\work\code\project_test\ebuy_app\reports\html\c2a1596b
+2020-11-09 16:11:38,887 - logs - INFO - -----报告转换完成------
+2020-11-09 16:11:39,124 - logs - INFO - -----报告压缩完成------
+2020-11-09 16:11:43,670 - logs - INFO - -----邮件发送完成------
+2020-11-09 16:11:43,863 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully released'}, 'devices': 'c2a1596b'}
+2020-11-09 16:11:43,864 - logs - INFO - 设备['c2a1596b']已释放
+2020-11-09 16:11:43,864 - logs - INFO - --------------结束---------------
+2020-11-09 16:24:55,036 - logs - INFO - Device count: 2
+2020-11-09 16:24:55,039 - logs - INFO - can_use_device_list: [{'colding': False, 'createdAt': '2020-10-22T17:41:49.397000', 'department': 'ebuy', 'idleTimeout': 600, 'lastActivatedAt': '2020-11-09T16:09:52.094000', 'owner': None, 'platform': 'android', 'present': True, 'properties': {'brand': 'Xiaomi', 'model': 'MI 5s', 'name': '小米 5S', 'propertyId': 'djc001', 'serial': 'c2a1596b', 'version': '7.0'}, 'udid': 'c2a1596b', 'updatedAt': '2020-11-09T16:10:24.334000', 'userId': None, 'using': False, 'usingBeganAt': '2020-11-09T16:09:52.094000', 'usingDuration': 15794.546999999999}]
+2020-11-09 16:24:55,254 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully added'}, 'devices': 'c2a1596b'}
+2020-11-09 16:25:38,472 - logs - INFO - ocr光学文字识别结果：[{'words': '下午4:25'}, {'words': '●@●'}, {'words': '小熊麦麦'}, {'words': ')Ne2周前购买了 VENUSAMY V宁小白盾75'}, {'words': 'e Buy Life'}, {'words': 'For your better life!'}, {'words': '可'}, {'words': '√全球精选'}, {'words': '√100%正品保障'}, {'words': '√全场包邮'}, {'words': '精选商品'}, {'words': 'Venusamy'}, {'words': 'VENUSAMY V宁小白盾75%酒精免'}, {'words': 'YENUSAMY'}, {'words': '洗杀菌消毒喷雾 T VENUSAMY∨宁'}, {'words': '领券满100减992领券满100减10'}, {'words': '￥0.01￥994'}, {'words': '潘婷'}, {'words': '首页'}, {'words': '购物袋'}, {'words': '我的'}]
+2020-11-09 16:25:41,458 - logs - INFO - 图像相似度结果: {'aHash': 1, 'dHash': 9, 'pHash': 17, 'classify_hist_with_split': 0.6450504660606384, 'calculate': 0.6263090372085571, 'third_res': 0.99820697307587}
+2020-11-09 16:25:42,593 - logs - INFO - -----用例执行完成------
+2020-11-09 16:25:42,594 - logs - INFO - cmd.exe /c allure generate D:\work\code\project_test\ebuy_app\reports\xml\c2a1596b -o D:\work\code\project_test\ebuy_app\reports\html\c2a1596b
+2020-11-09 16:25:45,519 - logs - INFO - -----报告转换完成------
+2020-11-09 16:25:45,747 - logs - INFO - -----报告压缩完成------
+2020-11-09 16:25:49,719 - logs - INFO - -----邮件发送完成------
+2020-11-09 16:25:49,918 - logs - INFO - {'result': {'success': True, 'description': 'Device successfully released'}, 'devices': 'c2a1596b'}
+2020-11-09 16:25:49,918 - logs - INFO - 设备['c2a1596b']已释放
+2020-11-09 16:25:49,918 - logs - INFO - --------------结束---------------

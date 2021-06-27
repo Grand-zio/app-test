@@ -1,0 +1,22 @@
+<environment>
+    <parameter>
+        <key>Browser</key>
+        <value>Chrome</value>
+    </parameter>
+    <parameter>
+        <key>Browser.Version</key>
+        <value>81.0.4044.92</value>
+    </parameter>
+    <parameter>
+        <key>Stand</key>
+        <value>test</value>
+    </parameter>
+        <parameter>
+        <key>ApiUrl</key>
+        <value>127.0.0.1/login</value>
+    </parameter>
+        <parameter>
+        <key>python.Version</key>
+        <value>3.6.2</value>
+    </parameter>
+</environment>
