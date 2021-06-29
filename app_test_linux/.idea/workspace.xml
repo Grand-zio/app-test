@@ -56,15 +56,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\work\code\project_test\ebuy_app" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\code\remote_test_code\app-test\app_test_linux\testcase\djc_demo" />
       <recent name="D:\work\code\project_test\ebuy_app\util" />
       <recent name="D:\work\code\project_test\ebuy_app\services" />
       <recent name="D:\work\code\project_test\ebuy_app\config" />
       <recent name="D:\work\code\project_test\ebuy_app\testcase" />
-      <recent name="D:\work\code\project_test\ebuy_app\testcase\project" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\code\project_test\ebuy_app" />
     </key>
   </component>
   <component name="RunManager" selected="Python.DeviceManger">
@@ -228,5 +228,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

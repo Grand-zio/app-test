@@ -45,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../app_test_linux" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,26 +205,30 @@
       <screen x="2560" y="0" width="2048" height="1152" />
     </state>
     <state x="3315" y="323" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1623060195919" />
-    <state width="2027" height="283" key="GridCell.Tab.0.bottom" timestamp="1624950616848">
+    <state x="3365" y="331" key="FileChooserDialogImpl" timestamp="1624951365200">
+      <screen x="2560" y="0" width="2048" height="1152" />
+    </state>
+    <state x="3365" y="331" key="FileChooserDialogImpl/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624951365200" />
+    <state width="2027" height="283" key="GridCell.Tab.0.bottom" timestamp="1624951345407">
       <screen x="2560" y="0" width="2048" height="1152" />
     </state>
     <state width="2027" height="246" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.2048.1152@0.0.2048.1152" timestamp="1623114956043" />
-    <state width="2027" height="283" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624950616848" />
-    <state width="2027" height="283" key="GridCell.Tab.0.center" timestamp="1624950616847">
+    <state width="2027" height="283" key="GridCell.Tab.0.bottom/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624951345407" />
+    <state width="2027" height="283" key="GridCell.Tab.0.center" timestamp="1624951345407">
       <screen x="2560" y="0" width="2048" height="1152" />
     </state>
     <state width="2027" height="246" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.2048.1152@0.0.2048.1152" timestamp="1623114956042" />
-    <state width="2027" height="283" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624950616847" />
-    <state width="2027" height="283" key="GridCell.Tab.0.left" timestamp="1624950616847">
+    <state width="2027" height="283" key="GridCell.Tab.0.center/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624951345407" />
+    <state width="2027" height="283" key="GridCell.Tab.0.left" timestamp="1624951345406">
       <screen x="2560" y="0" width="2048" height="1152" />
     </state>
     <state width="2027" height="246" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.2048.1152@0.0.2048.1152" timestamp="1623114956042" />
-    <state width="2027" height="283" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624950616847" />
-    <state width="2027" height="283" key="GridCell.Tab.0.right" timestamp="1624950616847">
+    <state width="2027" height="283" key="GridCell.Tab.0.left/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624951345406" />
+    <state width="2027" height="283" key="GridCell.Tab.0.right" timestamp="1624951345407">
       <screen x="2560" y="0" width="2048" height="1152" />
     </state>
     <state width="2027" height="246" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.2048.1152@0.0.2048.1152" timestamp="1623114956043" />
-    <state width="2027" height="283" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624950616847" />
+    <state width="2027" height="283" key="GridCell.Tab.0.right/0.0.2048.1152/2560.0.2048.1152@2560.0.2048.1152" timestamp="1624951345407" />
     <state x="398" y="0" width="1664" height="826" maximized="true" key="dock-window-1" timestamp="1624265808902">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
