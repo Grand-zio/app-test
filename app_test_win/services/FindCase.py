@@ -41,7 +41,7 @@ def findTestCases(path_name):
             if i.find('__pycache__') > 0:
                 continue
 
-            if i.split('/')[-1].find(path_name) <= -1:
+            if i.split('\\')[-1].find(path_name) <= -1:
                 # 未包含指定测试用例
                 continue
 
@@ -53,7 +53,7 @@ def findTestCases(path_name):
         dir_lists = []
 
         for i in dir_name_list:
-            if i.split('/')[-1].find(path_name) <= -1:
+            if i.split('\\')[-1].find(path_name) <= -1:
                 continue
             dir_lists.append(i)
 
@@ -69,7 +69,10 @@ def findTestCases(path_name):
                 if k.find('__pycache__') > 0:
                     continue
 
-                if k.split('/')[-1].find("test_") <= -1:
+                if k.find('__init__') > 0:
+                    continue
+
+                if k.split('\\')[-1].find("test_") <= -1:
                     continue
 
                 j_path_list.append(k)

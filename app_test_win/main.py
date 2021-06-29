@@ -141,6 +141,6 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
-    # print(get_case_name())
+    # main()
+    print(getCaseName())
     # 执行方式：切换到main目录， python main.py -n 用例名称/项目名称

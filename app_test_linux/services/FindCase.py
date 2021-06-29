@@ -72,6 +72,9 @@ def findTestCases(path_name):
                 if k.find('__pycache__') > 0:
                     continue
 
+                if k.find('__init__') > 0:
+                    continue
+
                 if k.split('/')[-1].find("test_") <= -1:
                     continue
 
